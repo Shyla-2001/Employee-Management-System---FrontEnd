@@ -1,0 +1,21 @@
+<h3 class="text-center my-4">Employee List</h3>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover align-middle">
+    <thead class="table-dark text-center">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Id</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees" class="text-center">
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.emailId}}</td>
+        <td><button (click)="updateEmployee(employee.employeeId)" class="btn btn-info">Update</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

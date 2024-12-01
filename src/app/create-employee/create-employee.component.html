@@ -1,0 +1,60 @@
+<h3 class="text-center my-4">Create New Employee</h3>
+
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm" class="employee-form">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="firstName" 
+            [(ngModel)]="employee.firstName" 
+            name="firstName" 
+            required
+            placeholder="Enter first name"
+            [ngClass]="{'is-invalid': employeeForm.submitted && !employee.firstName}">
+        <div *ngIf="employeeForm.submitted && !employee.firstName" class="invalid-feedback">
+            First name is required.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="lastName" 
+            [(ngModel)]="employee.lastName" 
+            name="lastName" 
+            required
+            placeholder="Enter last name"
+            [ngClass]="{'is-invalid': employeeForm.submitted && !employee.lastName}">
+        <div *ngIf="employeeForm.submitted && !employee.lastName" class="invalid-feedback">
+            Last name is required.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="emailId">Email Id</label>
+        <input 
+            type="email" 
+            class="form-control" 
+            id="emailId" 
+            [(ngModel)]="employee.emailId" 
+            name="emailId" 
+            required
+            placeholder="Enter email"
+            [ngClass]="{'is-invalid': employeeForm.submitted && !employee.emailId}">
+        <div *ngIf="employeeForm.submitted && !employee.emailId" class="invalid-feedback">
+            Email is required.
+        </div>
+    </div>
+
+    <div class="form-group text-center">
+        <button 
+            class="btn btn-success btn-lg" 
+            type="submit"
+            [disabled]="employeeForm.invalid">
+            Submit
+        </button>
+    </div>
+</form>

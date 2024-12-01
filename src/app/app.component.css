@@ -1,0 +1,13 @@
+/* Styling for the title */
+h1 {
+    font-family: cursive; /* You can use any font family you prefer */
+    font-size: 3em; /* Adjust the size as needed */
+    font-weight: 700; /* Make the title bold */
+    color:black;/* Set the color to green or any color you prefer */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Space out the letters for a modern look */
+    margin-top: 50px; /* Add space at the top */
+    margin-bottom: 20px; /* Add space below the title */
+  }
+  

@@ -1,0 +1,47 @@
+<h3 class="text-center my-4">Update Employee</h3>
+
+<form #employeeForm="ngForm" class="employee-form">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="firstName" 
+            [(ngModel)]="employee.firstName" 
+            name="firstName" 
+            placeholder="Enter first name"
+            required>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="lastName" 
+            [(ngModel)]="employee.lastName" 
+            name="lastName" 
+            placeholder="Enter last name"
+            required>
+    </div>
+
+    <div class="form-group">
+        <label for="emailId">Email Id</label>
+        <input 
+            type="email" 
+            class="form-control" 
+            id="emailId" 
+            [(ngModel)]="employee.emailId" 
+            name="emailId" 
+            placeholder="Enter email"
+            required>
+    </div>
+
+    <div class="form-group text-center">
+        <button 
+            class="btn btn-success btn-lg" 
+            type="submit">
+            Update
+        </button>
+    </div>
+</form>
