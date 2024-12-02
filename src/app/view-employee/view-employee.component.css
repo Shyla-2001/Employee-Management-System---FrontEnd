@@ -1,0 +1,50 @@
+/* Style the heading */
+.view-employee-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Container for employee details */
+.employee-details-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each employee detail item */
+.employee-detail {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Style for labels */
+.detail-label {
+    font-weight: bold;
+    color: rgb(10, 103, 243);;
+}
+
+/* Style for values */
+.detail-value {
+
+    color:black;
+    padding-left: 10px;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .employee-details-container {
+        width: 90%;
+    }
+
+    .view-employee-heading {
+        font-size: 1.5rem;
+    }
+}

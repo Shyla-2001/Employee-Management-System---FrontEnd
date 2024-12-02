@@ -24,4 +24,17 @@ export class EmployeeListComponent {
   updateEmployee(employeeId:number){
     this.router.navigate(['update-employee',employeeId]);
   }
+
+  deleteEmployee(employeeId:number){
+    this.employeeService.deleteEmployee(employeeId).subscribe(data=>
+    {
+      console.log(data);
+      this.getAllEmployees();
+    }
+    )
+  }
+  viewEmployee(employeeId:number){
+    this.router.navigate(['view-employee',employeeId]);
+
+  }
 }

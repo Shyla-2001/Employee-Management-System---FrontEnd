@@ -1,6 +1,6 @@
 <h3 class="text-center my-4">Update Employee</h3>
 
-<form #employeeForm="ngForm" class="employee-form">
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm" class="employee-form">
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input 
@@ -39,9 +39,9 @@
 
     <div class="form-group text-center">
         <button 
-            class="btn btn-success btn-lg" 
-            type="submit">
-            Update
-        </button>
+        class="btn btn-success btn-lg" 
+        type="submit">
+        Update
+    </button>    
     </div>
 </form>
